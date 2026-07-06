@@ -1292,7 +1292,7 @@ rec {
       };
       "lava-viggy" = rec {
         crateName = "lava-viggy";
-        version = "0.1.3";
+        version = "0.1.4";
         edition = "2024";
         src = lib.cleanSourceWith { filter = sourceFilter;  src = ./.; };
         libName = "lava_viggy";
@@ -1356,9 +1356,9 @@ rec {
       };
       "log" = rec {
         crateName = "log";
-        version = "0.4.31";
+        version = "0.4.32";
         edition = "2021";
-        sha256 = "0kq2fh6q2bjkrm8m6hj8kb7gxfd7cr7qbcpxd1lc1xq5rns30fqi";
+        sha256 = "0fmdg0cxig7i4fwf1sw7fmg4d1gdbfzniawcfpwydy1q7320fgwm";
         authors = [
           "The Rust Project Developers"
         ];

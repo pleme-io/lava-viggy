@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cargo_lock_sha256": "727ce01a55ed7717f415c964a724dea5dd7c5bf2f651c601a84fa6d31de03249",
+  "cargo_lock_sha256": "535e0199dd659a26432a8776643b22475d248801c5642c09225c06760c657c39",
   "target_resolves": {
     "base": {
       "arrayref-0.3.9": {
@@ -8,7 +8,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "arrayvec-0.7.6": {
+      "arrayvec-0.7.8": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -41,7 +41,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "cc-1.2.63": {
+      "cc-1.2.66": {
         "runtime_dependencies": [
           {
             "name": "find_msvc_tools",
@@ -72,15 +72,17 @@
         "build_dependencies": [],
         "features": []
       },
-      "chrono-0.4.44": {
+      "chrono-0.4.45": {
         "runtime_dependencies": [
           {
             "name": "iana_time_zone",
             "package_key": "iana-time-zone-0.1.65",
             "kind": "normal",
-            "features": [],
+            "features": [
+              "fallback"
+            ],
             "uses_default_features": true,
-            "optional": false,
+            "optional": true,
             "target": "cfg(unix)",
             "tree": "target"
           },
@@ -89,7 +91,7 @@
             "package_key": "num-traits-0.2.19",
             "kind": "normal",
             "features": [],
-            "uses_default_features": true,
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
@@ -140,7 +142,9 @@
             "name": "generic_array",
             "package_key": "generic-array-0.14.7",
             "kind": "normal",
-            "features": [],
+            "features": [
+              "more_lengths"
+            ],
             "uses_default_features": true,
             "optional": false,
             "target": null,
@@ -170,13 +174,13 @@
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
-            "optional": false,
+            "optional": true,
             "target": null,
             "tree": "target"
           },
           {
             "name": "zeroize",
-            "package_key": "zeroize-1.8.2",
+            "package_key": "zeroize-1.9.0",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -201,7 +205,7 @@
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
-            "optional": false,
+            "optional": true,
             "target": null,
             "tree": "target"
           },
@@ -228,16 +232,6 @@
       "ed25519-2.2.3": {
         "runtime_dependencies": [
           {
-            "name": "pkcs8",
-            "package_key": "pkcs8-0.10.2",
-            "kind": "normal",
-            "features": [],
-            "uses_default_features": true,
-            "optional": true,
-            "target": null,
-            "tree": "target"
-          },
-          {
             "name": "signature",
             "package_key": "signature-2.2.0",
             "kind": "normal",
@@ -260,8 +254,10 @@
             "name": "curve25519_dalek",
             "package_key": "curve25519-dalek-4.1.3",
             "kind": "normal",
-            "features": [],
-            "uses_default_features": true,
+            "features": [
+              "digest"
+            ],
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
@@ -279,16 +275,6 @@
           {
             "name": "rand_core",
             "package_key": "rand_core-0.6.4",
-            "kind": "normal",
-            "features": [],
-            "uses_default_features": false,
-            "optional": true,
-            "target": null,
-            "tree": "target"
-          },
-          {
-            "name": "serde",
-            "package_key": "serde-1.0.228",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -318,7 +304,7 @@
           },
           {
             "name": "zeroize",
-            "package_key": "zeroize-1.8.2",
+            "package_key": "zeroize-1.9.0",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -463,11 +449,11 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-anomaly-0.1.3": {
+      "lava-anomaly-0.1.3-535a995c7655630b7fb918d6cda209c49c85dc7e": {
         "runtime_dependencies": [
           {
             "name": "chrono",
-            "package_key": "chrono-0.4.44",
+            "package_key": "chrono-0.4.45",
             "kind": "normal",
             "features": [
               "serde"
@@ -491,7 +477,7 @@
           },
           {
             "name": "lava_drift",
-            "package_key": "lava-drift-0.1.2",
+            "package_key": "lava-drift-0.1.2-37f3943167e6523662e70e758aeeddbbc4a89607",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -501,7 +487,7 @@
           },
           {
             "name": "lava_outcome_chain",
-            "package_key": "lava-outcome-chain-0.1.2",
+            "package_key": "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -545,11 +531,11 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-drift-0.1.2": {
+      "lava-drift-0.1.2-37f3943167e6523662e70e758aeeddbbc4a89607": {
         "runtime_dependencies": [
           {
             "name": "chrono",
-            "package_key": "chrono-0.4.44",
+            "package_key": "chrono-0.4.45",
             "kind": "normal",
             "features": [
               "serde"
@@ -573,7 +559,7 @@
           },
           {
             "name": "lava_outcome_chain",
-            "package_key": "lava-outcome-chain-0.1.2",
+            "package_key": "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -617,7 +603,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-outcome-chain-0.1.2": {
+      "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb": {
         "runtime_dependencies": [
           {
             "name": "blake3",
@@ -631,7 +617,7 @@
           },
           {
             "name": "chrono",
-            "package_key": "chrono-0.4.44",
+            "package_key": "chrono-0.4.45",
             "kind": "normal",
             "features": [
               "serde"
@@ -645,7 +631,9 @@
             "name": "ed25519_dalek",
             "package_key": "ed25519-dalek-2.2.0",
             "kind": "normal",
-            "features": [],
+            "features": [
+              "rand_core"
+            ],
             "uses_default_features": true,
             "optional": false,
             "target": null,
@@ -719,11 +707,11 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-viggy-0.1.3": {
+      "lava-viggy-0.1.4": {
         "runtime_dependencies": [
           {
             "name": "chrono",
-            "package_key": "chrono-0.4.44",
+            "package_key": "chrono-0.4.45",
             "kind": "normal",
             "features": [
               "serde"
@@ -747,7 +735,7 @@
           },
           {
             "name": "lava_anomaly",
-            "package_key": "lava-anomaly-0.1.3",
+            "package_key": "lava-anomaly-0.1.3-535a995c7655630b7fb918d6cda209c49c85dc7e",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -757,7 +745,7 @@
           },
           {
             "name": "lava_drift",
-            "package_key": "lava-drift-0.1.2",
+            "package_key": "lava-drift-0.1.2-37f3943167e6523662e70e758aeeddbbc4a89607",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -767,7 +755,7 @@
           },
           {
             "name": "lava_outcome_chain",
-            "package_key": "lava-outcome-chain-0.1.2",
+            "package_key": "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -819,7 +807,7 @@
           "std"
         ]
       },
-      "memchr-2.8.1": {
+      "memchr-2.8.2": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
@@ -878,7 +866,7 @@
         "runtime_dependencies": [
           {
             "name": "zerocopy",
-            "package_key": "zerocopy-0.8.50",
+            "package_key": "zerocopy-0.8.52",
             "kind": "normal",
             "features": [
               "simd"
@@ -914,14 +902,14 @@
           "proc-macro"
         ]
       },
-      "quote-1.0.45": {
+      "quote-1.0.46": {
         "runtime_dependencies": [
           {
             "name": "proc_macro2",
             "package_key": "proc-macro2-1.0.106",
             "kind": "normal",
             "features": [],
-            "uses_default_features": true,
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
@@ -983,8 +971,10 @@
             "name": "ppv_lite86",
             "package_key": "ppv-lite86-0.2.21",
             "kind": "normal",
-            "features": [],
-            "uses_default_features": true,
+            "features": [
+              "simd"
+            ],
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
@@ -1098,15 +1088,17 @@
             "name": "proc_macro2",
             "package_key": "proc-macro2-1.0.106",
             "kind": "normal",
-            "features": [],
-            "uses_default_features": true,
+            "features": [
+              "proc-macro"
+            ],
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
           },
           {
             "name": "quote",
-            "package_key": "quote-1.0.45",
+            "package_key": "quote-1.0.46",
             "kind": "normal",
             "features": [
               "proc-macro"
@@ -1118,7 +1110,7 @@
           },
           {
             "name": "syn",
-            "package_key": "syn-2.0.117",
+            "package_key": "syn-2.0.118",
             "kind": "normal",
             "features": [
               "clone-impls",
@@ -1152,7 +1144,7 @@
           },
           {
             "name": "memchr",
-            "package_key": "memchr-2.8.1",
+            "package_key": "memchr-2.8.2",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -1234,18 +1226,7 @@
         ]
       },
       "signature-2.2.0": {
-        "runtime_dependencies": [
-          {
-            "name": "rand_core",
-            "package_key": "rand_core-0.6.4",
-            "kind": "normal",
-            "features": [],
-            "uses_default_features": false,
-            "optional": true,
-            "target": null,
-            "tree": "target"
-          }
-        ],
+        "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
           "alloc",
@@ -1254,16 +1235,6 @@
       },
       "spki-0.7.3": {
         "runtime_dependencies": [
-          {
-            "name": "base64ct",
-            "package_key": "base64ct-1.8.3",
-            "kind": "normal",
-            "features": [],
-            "uses_default_features": false,
-            "optional": true,
-            "target": null,
-            "tree": "target"
-          },
           {
             "name": "der",
             "package_key": "der-0.7.10",
@@ -1288,21 +1259,21 @@
         "build_dependencies": [],
         "features": []
       },
-      "syn-2.0.117": {
+      "syn-2.0.118": {
         "runtime_dependencies": [
           {
             "name": "proc_macro2",
             "package_key": "proc-macro2-1.0.106",
             "kind": "normal",
             "features": [],
-            "uses_default_features": true,
+            "uses_default_features": false,
             "optional": false,
             "target": null,
             "tree": "target"
           },
           {
             "name": "quote",
-            "package_key": "quote-1.0.45",
+            "package_key": "quote-1.0.46",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -1368,7 +1339,7 @@
           },
           {
             "name": "quote",
-            "package_key": "quote-1.0.45",
+            "package_key": "quote-1.0.46",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1378,7 +1349,7 @@
           },
           {
             "name": "syn",
-            "package_key": "syn-2.0.117",
+            "package_key": "syn-2.0.118",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1405,14 +1376,14 @@
         "build_dependencies": [],
         "features": []
       },
-      "zerocopy-0.8.50": {
+      "zerocopy-0.8.52": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
           "simd"
         ]
       },
-      "zeroize-1.8.2": {
+      "zeroize-1.9.0": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
@@ -1442,7 +1413,7 @@
               },
               {
                 "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
+                "package_key": "arrayvec-0.7.8",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1474,7 +1445,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.2.63",
+                "package_key": "cc-1.2.66",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -1576,7 +1547,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
+                "package_key": "zeroize-1.9.0",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1617,658 +1588,6 @@
                 "tree": "target"
               }
             ],
-            "build_dependencies": [],
-            "features": [
-              "fallback"
-            ]
-          }
-        }
-      },
-      "x86_64-apple-darwin": {
-        "overrides": {
-          "blake3-1.8.5": {
-            "runtime_dependencies": [
-              {
-                "name": "arrayref",
-                "package_key": "arrayref-0.3.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "constant_time_eq",
-                "package_key": "constant_time_eq-0.4.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "cc",
-                "package_key": "cc-1.2.63",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "default",
-              "std"
-            ]
-          },
-          "core-foundation-sys-0.8.7": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "link"
-            ]
-          },
-          "cpufeatures-0.2.17": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "cpufeatures-0.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "curve25519-dalek-4.1.3": {
-            "runtime_dependencies": [
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.2.17",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(target_arch = \"x86_64\")",
-                "tree": "target"
-              },
-              {
-                "name": "curve25519_dalek_derive",
-                "package_key": "curve25519-dalek-derive-0.1.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
-                "tree": "host"
-              },
-              {
-                "name": "digest",
-                "package_key": "digest-0.10.7",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "subtle",
-                "package_key": "subtle-2.6.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "rustc_version",
-                "package_key": "rustc_version-0.4.1",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "alloc",
-              "digest",
-              "precomputed-tables",
-              "zeroize"
-            ]
-          },
-          "curve25519-dalek-derive-0.1.1": {
-            "runtime_dependencies": [
-              {
-                "name": "proc_macro2",
-                "package_key": "proc-macro2-1.0.106",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "quote",
-                "package_key": "quote-1.0.45",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "syn",
-                "package_key": "syn-2.0.117",
-                "kind": "normal",
-                "features": [
-                  "full"
-                ],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
-          "iana-time-zone-0.1.65": {
-            "runtime_dependencies": [
-              {
-                "name": "core_foundation_sys",
-                "package_key": "core-foundation-sys-0.8.7",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(target_vendor = \"apple\")",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "fallback"
-            ]
-          }
-        }
-      },
-      "x86_64-unknown-linux-gnu": {
-        "overrides": {
-          "blake3-1.8.5": {
-            "runtime_dependencies": [
-              {
-                "name": "arrayref",
-                "package_key": "arrayref-0.3.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "constant_time_eq",
-                "package_key": "constant_time_eq-0.4.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "cc",
-                "package_key": "cc-1.2.63",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "default",
-              "std"
-            ]
-          },
-          "cpufeatures-0.2.17": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "cpufeatures-0.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "curve25519-dalek-4.1.3": {
-            "runtime_dependencies": [
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.2.17",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(target_arch = \"x86_64\")",
-                "tree": "target"
-              },
-              {
-                "name": "curve25519_dalek_derive",
-                "package_key": "curve25519-dalek-derive-0.1.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
-                "tree": "host"
-              },
-              {
-                "name": "digest",
-                "package_key": "digest-0.10.7",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "subtle",
-                "package_key": "subtle-2.6.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "rustc_version",
-                "package_key": "rustc_version-0.4.1",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "alloc",
-              "digest",
-              "precomputed-tables",
-              "zeroize"
-            ]
-          },
-          "curve25519-dalek-derive-0.1.1": {
-            "runtime_dependencies": [
-              {
-                "name": "proc_macro2",
-                "package_key": "proc-macro2-1.0.106",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "quote",
-                "package_key": "quote-1.0.45",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "syn",
-                "package_key": "syn-2.0.117",
-                "kind": "normal",
-                "features": [
-                  "full"
-                ],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
-          "iana-time-zone-0.1.65": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "fallback"
-            ]
-          }
-        }
-      },
-      "x86_64-unknown-linux-musl": {
-        "overrides": {
-          "blake3-1.8.5": {
-            "runtime_dependencies": [
-              {
-                "name": "arrayref",
-                "package_key": "arrayref-0.3.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "constant_time_eq",
-                "package_key": "constant_time_eq-0.4.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "cc",
-                "package_key": "cc-1.2.63",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "default",
-              "std"
-            ]
-          },
-          "cpufeatures-0.2.17": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "cpufeatures-0.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
-          "curve25519-dalek-4.1.3": {
-            "runtime_dependencies": [
-              {
-                "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "cpufeatures",
-                "package_key": "cpufeatures-0.2.17",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(target_arch = \"x86_64\")",
-                "tree": "target"
-              },
-              {
-                "name": "curve25519_dalek_derive",
-                "package_key": "curve25519-dalek-derive-0.1.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
-                "tree": "host"
-              },
-              {
-                "name": "digest",
-                "package_key": "digest-0.10.7",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "subtle",
-                "package_key": "subtle-2.6.1",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [
-              {
-                "name": "rustc_version",
-                "package_key": "rustc_version-0.4.1",
-                "kind": "build",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "host"
-              }
-            ],
-            "features": [
-              "alloc",
-              "digest",
-              "precomputed-tables",
-              "zeroize"
-            ]
-          },
-          "curve25519-dalek-derive-0.1.1": {
-            "runtime_dependencies": [
-              {
-                "name": "proc_macro2",
-                "package_key": "proc-macro2-1.0.106",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "quote",
-                "package_key": "quote-1.0.45",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "syn",
-                "package_key": "syn-2.0.117",
-                "kind": "normal",
-                "features": [
-                  "full"
-                ],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
-          "iana-time-zone-0.1.65": {
-            "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
               "fallback"
@@ -2292,7 +1611,7 @@
               },
               {
                 "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
+                "package_key": "arrayvec-0.7.8",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2324,7 +1643,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.2.63",
+                "package_key": "cc-1.2.66",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -2418,7 +1737,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
+                "package_key": "zeroize-1.9.0",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2471,7 +1790,7 @@
               },
               {
                 "name": "arrayvec",
-                "package_key": "arrayvec-0.7.6",
+                "package_key": "arrayvec-0.7.8",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2503,7 +1822,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.2.63",
+                "package_key": "cc-1.2.66",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -2597,7 +1916,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.8.2",
+                "package_key": "zeroize-1.9.0",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2633,6 +1952,658 @@
             ]
           }
         }
+      },
+      "x86_64-apple-darwin": {
+        "overrides": {
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.8",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.66",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
+            ]
+          },
+          "core-foundation-sys-0.8.7": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "default",
+              "link"
+            ]
+          },
+          "cpufeatures-0.2.17": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "curve25519-dalek-4.1.3": {
+            "runtime_dependencies": [
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.2.17",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_arch = \"x86_64\")",
+                "tree": "target"
+              },
+              {
+                "name": "curve25519_dalek_derive",
+                "package_key": "curve25519-dalek-derive-0.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
+                "tree": "host"
+              },
+              {
+                "name": "digest",
+                "package_key": "digest-0.10.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "subtle",
+                "package_key": "subtle-2.6.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "zeroize",
+                "package_key": "zeroize-1.9.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "rustc_version",
+                "package_key": "rustc_version-0.4.1",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "alloc",
+              "digest",
+              "precomputed-tables",
+              "zeroize"
+            ]
+          },
+          "curve25519-dalek-derive-0.1.1": {
+            "runtime_dependencies": [
+              {
+                "name": "proc_macro2",
+                "package_key": "proc-macro2-1.0.106",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "quote",
+                "package_key": "quote-1.0.46",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "syn",
+                "package_key": "syn-2.0.118",
+                "kind": "normal",
+                "features": [
+                  "full"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [
+              {
+                "name": "core_foundation_sys",
+                "package_key": "core-foundation-sys-0.8.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_vendor = \"apple\")",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          }
+        }
+      },
+      "x86_64-unknown-linux-gnu": {
+        "overrides": {
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.8",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.66",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
+            ]
+          },
+          "cpufeatures-0.2.17": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "curve25519-dalek-4.1.3": {
+            "runtime_dependencies": [
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.2.17",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_arch = \"x86_64\")",
+                "tree": "target"
+              },
+              {
+                "name": "curve25519_dalek_derive",
+                "package_key": "curve25519-dalek-derive-0.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
+                "tree": "host"
+              },
+              {
+                "name": "digest",
+                "package_key": "digest-0.10.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "subtle",
+                "package_key": "subtle-2.6.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "zeroize",
+                "package_key": "zeroize-1.9.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "rustc_version",
+                "package_key": "rustc_version-0.4.1",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "alloc",
+              "digest",
+              "precomputed-tables",
+              "zeroize"
+            ]
+          },
+          "curve25519-dalek-derive-0.1.1": {
+            "runtime_dependencies": [
+              {
+                "name": "proc_macro2",
+                "package_key": "proc-macro2-1.0.106",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "quote",
+                "package_key": "quote-1.0.46",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "syn",
+                "package_key": "syn-2.0.118",
+                "kind": "normal",
+                "features": [
+                  "full"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          }
+        }
+      },
+      "x86_64-unknown-linux-musl": {
+        "overrides": {
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.8",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.66",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
+            ]
+          },
+          "cpufeatures-0.2.17": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
+          },
+          "curve25519-dalek-4.1.3": {
+            "runtime_dependencies": [
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.2.17",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_arch = \"x86_64\")",
+                "tree": "target"
+              },
+              {
+                "name": "curve25519_dalek_derive",
+                "package_key": "curve25519-dalek-derive-0.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(all(not(curve25519_dalek_backend = \"fiat\"), not(curve25519_dalek_backend = \"serial\"), target_arch = \"x86_64\"))",
+                "tree": "host"
+              },
+              {
+                "name": "digest",
+                "package_key": "digest-0.10.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "subtle",
+                "package_key": "subtle-2.6.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "zeroize",
+                "package_key": "zeroize-1.9.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": true,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "rustc_version",
+                "package_key": "rustc_version-0.4.1",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "alloc",
+              "digest",
+              "precomputed-tables",
+              "zeroize"
+            ]
+          },
+          "curve25519-dalek-derive-0.1.1": {
+            "runtime_dependencies": [
+              {
+                "name": "proc_macro2",
+                "package_key": "proc-macro2-1.0.106",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "quote",
+                "package_key": "quote-1.0.46",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "syn",
+                "package_key": "syn-2.0.118",
+                "kind": "normal",
+                "features": [
+                  "full"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          }
+        }
       }
     }
   },
@@ -2640,7 +2611,7 @@
     "arrayref-0.3.9": {
       "edition": "2015"
     },
-    "arrayvec-0.7.6": {
+    "arrayvec-0.7.8": {
       "edition": "2018"
     },
     "autocfg-1.5.1": {
@@ -2656,13 +2627,13 @@
     "block-buffer-0.10.4": {
       "edition": "2018"
     },
-    "cc-1.2.63": {
+    "cc-1.2.66": {
       "edition": "2018"
     },
     "cfg-if-1.0.4": {
       "edition": "2018"
     },
-    "chrono-0.4.44": {
+    "chrono-0.4.45": {
       "edition": "2021"
     },
     "const-oid-0.9.6": {
@@ -2670,6 +2641,9 @@
     },
     "constant_time_eq-0.4.2": {
       "edition": "2024"
+    },
+    "core-foundation-sys-0.8.7": {
+      "edition": "2018"
     },
     "cpufeatures-0.2.17": {
       "edition": "2018"
@@ -2728,13 +2702,13 @@
     "itoa-1.0.18": {
       "edition": "2021"
     },
-    "lava-anomaly-0.1.3": {
+    "lava-anomaly-0.1.3-535a995c7655630b7fb918d6cda209c49c85dc7e": {
       "edition": "2024"
     },
-    "lava-drift-0.1.2": {
+    "lava-drift-0.1.2-37f3943167e6523662e70e758aeeddbbc4a89607": {
       "edition": "2024"
     },
-    "lava-outcome-chain-0.1.2": {
+    "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb": {
       "edition": "2024",
       "binaries": [
         {
@@ -2743,7 +2717,7 @@
         }
       ]
     },
-    "lava-viggy-0.1.3": {
+    "lava-viggy-0.1.4": {
       "edition": "2024",
       "lib_target": {
         "name": "lava_viggy",
@@ -2754,7 +2728,7 @@
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "memchr-2.8.1": {
+    "memchr-2.8.2": {
       "edition": "2021"
     },
     "num-traits-0.2.19": {
@@ -2771,7 +2745,7 @@
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "quote-1.0.45": {
+    "quote-1.0.46": {
       "edition": "2021",
       "build_script": "build.rs"
     },
@@ -2821,7 +2795,7 @@
     "subtle-2.6.1": {
       "edition": "2018"
     },
-    "syn-2.0.117": {
+    "syn-2.0.118": {
       "edition": "2021"
     },
     "thiserror-2.0.18": {
@@ -2841,25 +2815,22 @@
     "version_check-0.9.5": {
       "edition": "2015"
     },
-    "zerocopy-0.8.50": {
+    "zerocopy-0.8.52": {
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "zeroize-1.8.2": {
-      "edition": "2021"
+    "zeroize-1.9.0": {
+      "edition": "2024"
     },
     "zmij-1.0.21": {
       "edition": "2021",
       "build_script": "build.rs"
-    },
-    "core-foundation-sys-0.8.7": {
-      "edition": "2018"
     }
   },
   "git_nar_sha256": {
-    "lava-anomaly-0.1.3": "sha256-hayErFzPH5n7cwWUcQ5wEZwDmidWBTJdzRXcq8mww4w=",
-    "lava-drift-0.1.2": "sha256-aUHjKgVmkfef8Nn3Aiuwo+dhjE2/KcK6bbLJa9giOPA=",
-    "lava-outcome-chain-0.1.2": "sha256-Ax/twvuQ+8Yb4D5V69mK5TbbqLvJ1MVbKbHcjB6F8E8="
+    "lava-anomaly-0.1.3-535a995c7655630b7fb918d6cda209c49c85dc7e": "sha256-hayErFzPH5n7cwWUcQ5wEZwDmidWBTJdzRXcq8mww4w=",
+    "lava-drift-0.1.2-37f3943167e6523662e70e758aeeddbbc4a89607": "sha256-aUHjKgVmkfef8Nn3Aiuwo+dhjE2/KcK6bbLJa9giOPA=",
+    "lava-outcome-chain-0.1.2-193b8e7f94a445c0653bce5e8f48b7477d3baeeb": "sha256-Ax/twvuQ+8Yb4D5V69mK5TbbqLvJ1MVbKbHcjB6F8E8="
   },
   "flake_metadata": {}
 }
