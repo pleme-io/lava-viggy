@@ -50,6 +50,18 @@
 
 #![allow(clippy::module_name_repetitions)]
 
+pub mod compliance;
+pub mod compliance_controller;
+
+pub use compliance::{
+    ArmObservation, ArmOutcome, ArmVerdict, ComplianceArm, ComplianceBaseline, CompliancePayload,
+    CompliancePromessa, ComplianceSpecError, ControlId,
+};
+pub use compliance_controller::{
+    AttestError, BeatIntent, ComplianceController, ComplianceObserver, ComplianceTickError,
+    ObserveError, ScaffoldObserver, ScaffoldTickReport,
+};
+
 use chrono::{DateTime, Duration, Utc};
 use indexmap::IndexMap;
 use lava_anomaly::{AnomalyRouter, LavaAnomaly, RemediationAction, RemediationPolicy, RoutingDecision};
