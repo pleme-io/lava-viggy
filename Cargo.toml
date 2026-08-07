@@ -21,6 +21,6 @@ serde_json = "1"
 chrono = { version = "0.4", features = ["serde"] }
 indexmap = { version = "2", features = ["serde"] }
 thiserror = "2"
-lava-outcome-chain = { git = "https://github.com/pleme-io/lava-outcome-chain", branch = "main" }
-lava-drift = { git = "https://github.com/pleme-io/lava-drift", branch = "main" }
-lava-anomaly = { git = "https://github.com/pleme-io/lava-anomaly", branch = "main" }
+lava-outcome-chain = "0.1"
+lava-drift = "0.1"
+lava-anomaly = "0.1"
