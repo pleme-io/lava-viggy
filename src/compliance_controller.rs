@@ -329,7 +329,7 @@ mod tests {
     }
 
     fn controller_with<O: ComplianceObserver>(obs: O) -> ComplianceController<O> {
-        ComplianceController::new(CompliancePromessa::camelot_fedramp_high("camelot"), obs)
+        ComplianceController::new(CompliancePromessa::fedramp_high("compliance"), obs)
     }
 
     #[test]

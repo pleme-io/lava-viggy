@@ -1,5 +1,5 @@
 //! Compliance promessa — the typed `(defpromessa … :target (Compliance …))`
-//! value for the Camelot FedRAMP audit-readiness arm (F-4).
+//! value for the FedRAMP audit-readiness arm (F-4).
 //!
 //! This is the **SCAFFOLD** half of the F-4 arm: the typed Compliance
 //! promessa *value* + the OutcomeChain *payload* it attests. The
@@ -10,7 +10,7 @@
 //!
 //! `theory/CONTINUOUS-SOLUTION-MACHINE.md` §III.1 declares a
 //! `PromessaTarget::Compliance(ComplianceTarget)` — a baseline + a
-//! control set + an on-violation policy. `theory/CAMELOT-FEDRAMP-COMPLIANCE.md`
+//! control set + an on-violation policy. The F-4 compliance spec
 //! §3/§6 pins the F-4 arm to a *single* Compliance promessa observed
 //! via a composite of three sources, one per compliance arm:
 //!
@@ -123,7 +123,7 @@ pub enum ArmObservation {
     /// Observe the tameshi image-attestation heartbeat chain (F-4 §6:
     /// signed-image evidence). Peer of this crate's OutcomeChain.
     TameshiHeartbeat {
-        /// The attestation chain name, e.g. `camelot-attest`.
+        /// The attestation chain name, e.g. `build-attest`.
         chain: String,
         /// The attested layer, e.g. `Build`.
         layer: String,
@@ -156,6 +156,12 @@ pub struct ComplianceArm {
 }
 
 impl ComplianceArm {
+    /// The tameshi attestation chain the RA-5 arm reads. Named for the
+    /// layer it attests (`Build`), not for whichever estate's pipeline
+    /// produces it — any pipeline emitting build attestations satisfies
+    /// the arm, so the estate never belonged in the value.
+    pub const BUILD_ATTEST_CHAIN: &'static str = "build-attest";
+
     /// F-4 ARM 1 — SC-8 / SC-8(1): every east-west edge is mTLS.
     #[must_use]
     pub fn sc8() -> Self {
@@ -179,7 +185,7 @@ impl ComplianceArm {
             intent: "no unscanned or unsigned image enters the trusted zone".into(),
             controls: vec![ControlId::new("RA-5"), ControlId::new("SI-2")],
             observation: Some(ArmObservation::TameshiHeartbeat {
-                chain: "camelot-attest".into(),
+                chain: Self::BUILD_ATTEST_CHAIN.into(),
                 layer: "Build".into(),
             }),
         }
@@ -211,7 +217,7 @@ impl ComplianceArm {
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct CompliancePromessa {
-    /// Promessa name, e.g. `camelot-fedramp-high`.
+    /// Promessa name, e.g. `fedramp-high`.
     pub name: String,
     /// Kubernetes namespace the promessa is scoped to.
     pub namespace: String,
@@ -230,13 +236,18 @@ pub struct CompliancePromessa {
 }
 
 impl CompliancePromessa {
-    /// The canonical Camelot FedRAMP-High promessa: the three F-4 arms
-    /// at a 5-minute reconcile interval (matches CAMELOT-FEDRAMP §3.1
-    /// `:interval 5m`).
+    /// Canonical name of the FedRAMP-High preset below. Named for the
+    /// compliance POSTURE it asserts, not for one estate that claims it:
+    /// every estate claiming FedRAMP-High reuses this same value.
+    pub const FEDRAMP_HIGH_NAME: &'static str = "fedramp-high";
+
+    /// The canonical FedRAMP-High promessa: the three F-4 arms at a
+    /// 5-minute reconcile interval (the `:interval 5m` the F-4
+    /// compliance spec §3.1 pins).
     #[must_use]
-    pub fn camelot_fedramp_high(namespace: impl Into<String>) -> Self {
+    pub fn fedramp_high(namespace: impl Into<String>) -> Self {
         Self {
-            name: "camelot-fedramp-high".into(),
+            name: Self::FEDRAMP_HIGH_NAME.into(),
             namespace: namespace.into(),
             baseline: ComplianceBaseline::FedrampHigh,
             arms: vec![
@@ -407,13 +418,13 @@ impl Payload for CompliancePayload {
 /// use chrono::Duration;
 ///
 /// let p = defcompliance_promessa! {
-///     name: "camelot-fedramp-high",
-///     namespace: "camelot",
+///     name: "fedramp-high",
+///     namespace: "compliance",
 ///     baseline: ComplianceBaseline::FedrampHigh,
 ///     reconcile_every: Duration::minutes(5),
 ///     arms: [ComplianceArm::sc8(), ComplianceArm::ra5(), ComplianceArm::audit_controls()],
 /// };
-/// assert_eq!(p.name, "camelot-fedramp-high");
+/// assert_eq!(p.name, "fedramp-high");
 /// ```
 #[macro_export]
 macro_rules! defcompliance_promessa {
@@ -456,8 +467,11 @@ mod tests {
     use super::*;
 
     #[test]
-    fn camelot_fedramp_high_has_the_three_f4_arms() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+    fn fedramp_high_has_the_three_f4_arms() {
+        let p = CompliancePromessa::fedramp_high("compliance");
+        // Derived, not restated: the preset's name IS the const, so a
+        // rename of one can never silently disagree with the other.
+        assert_eq!(p.name, CompliancePromessa::FEDRAMP_HIGH_NAME);
         let arm_tags: Vec<&str> = p.arms.iter().map(|a| a.arm.as_str()).collect();
         assert_eq!(arm_tags, vec!["sc-8", "ra-5", "audit"]);
         assert_eq!(p.baseline, ComplianceBaseline::FedrampHigh);
@@ -466,7 +480,7 @@ mod tests {
 
     #[test]
     fn control_set_dedups_and_covers_all_three_arms() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let p = CompliancePromessa::fedramp_high("compliance");
         let controls: Vec<String> = p.control_set().into_iter().map(|c| c.0).collect();
         // SC-8, SC-8(1), RA-5, SI-2, AU-2, AU-12, CA-7 — 7 distinct.
         assert!(controls.contains(&"SC-8".to_string()));
@@ -491,6 +505,20 @@ mod tests {
     }
 
     #[test]
+    fn ra5_arm_reads_the_build_attestation_chain() {
+        let arm = ComplianceArm::ra5();
+        match arm.observation.expect("ra-5 has an observation") {
+            ArmObservation::TameshiHeartbeat { chain, layer } => {
+                // Derived from the const, so the chain name cannot drift
+                // away from the value the arm actually ships.
+                assert_eq!(chain, ComplianceArm::BUILD_ATTEST_CHAIN);
+                assert_eq!(layer, "Build");
+            }
+            other => panic!("expected TameshiHeartbeat observation, got {other:?}"),
+        }
+    }
+
+    #[test]
     fn audit_arm_has_no_observation_it_is_derived_by_kensa() {
         let arm = ComplianceArm::audit_controls();
         assert!(arm.observation.is_none());
@@ -498,20 +526,20 @@ mod tests {
 
     #[test]
     fn valid_promessa_passes_validation() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let p = CompliancePromessa::fedramp_high("compliance");
         assert!(p.validate().is_ok());
     }
 
     #[test]
     fn empty_arms_fails_validation() {
-        let mut p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let mut p = CompliancePromessa::fedramp_high("compliance");
         p.arms.clear();
         assert_eq!(p.validate(), Err(ComplianceSpecError::NoArms));
     }
 
     #[test]
     fn spec_hash_is_stable_and_content_addressed() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let p = CompliancePromessa::fedramp_high("compliance");
         let h1 = p.spec_hash().unwrap();
         let h2 = p.spec_hash().unwrap();
         assert_eq!(h1, h2);
@@ -520,7 +548,7 @@ mod tests {
 
     #[test]
     fn spec_hash_changes_with_baseline() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let p = CompliancePromessa::fedramp_high("compliance");
         let mut q = p.clone();
         q.baseline = ComplianceBaseline::FedrampModerate;
         assert_ne!(p.spec_hash().unwrap(), q.spec_hash().unwrap());
@@ -529,13 +557,13 @@ mod tests {
     #[test]
     fn defcompliance_promessa_macro_builds_the_value() {
         let p = defcompliance_promessa! {
-            name: "camelot-fedramp-high",
-            namespace: "camelot",
+            name: CompliancePromessa::FEDRAMP_HIGH_NAME,
+            namespace: "compliance",
             baseline: ComplianceBaseline::FedrampHigh,
             reconcile_every: Duration::minutes(5),
             arms: [ComplianceArm::sc8(), ComplianceArm::ra5(), ComplianceArm::audit_controls()],
         };
-        assert_eq!(p.name, "camelot-fedramp-high");
+        assert_eq!(p.name, CompliancePromessa::FEDRAMP_HIGH_NAME);
         assert_eq!(p.arms.len(), 3);
         assert!(p.validate().is_ok());
     }
@@ -547,7 +575,7 @@ mod tests {
 
     #[test]
     fn promessa_serializes_with_typed_baseline_string() {
-        let p = CompliancePromessa::camelot_fedramp_high("camelot");
+        let p = CompliancePromessa::fedramp_high("compliance");
         let json = serde_json::to_string(&p).unwrap();
         assert!(json.contains(r#""baseline":"fedramp-high""#));
     }
