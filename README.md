@@ -1,8 +1,7 @@
 # lava-viggy
 
 Typed PromessaController surface — the 7-beat Viggy tick.
-L5 of the lava-suite. Operationalizes
-[theory/CONTINUOUS-SOLUTION-MACHINE.md](https://github.com/pleme-io/theory).
+L5 of the lava-suite.
 
 ## The 7-beat tick
 

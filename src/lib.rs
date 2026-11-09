@@ -1,7 +1,5 @@
 //! lava-viggy — typed PromessaController surface for the lava-suite.
 //!
-//! Operationalizes theory/CONTINUOUS-SOLUTION-MACHINE.md.
-//!
 //! ## The 7-beat Viggy tick
 //!
 //! ```text

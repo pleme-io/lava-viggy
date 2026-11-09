@@ -1,6 +1,6 @@
 [package]
 authors = ["pleme-io"]
-description = "lava-viggy — typed PromessaController trait for the 7-beat Viggy tick (Observe → Diff → Classify → Decide → Act → Attest → Tick). Operationalizes theory/CONTINUOUS-SOLUTION-MACHINE.md — every controller in the lava-suite expresses its reconcile loop as a typed Promessa whose tick produces a typed BeatOutcome at every beat. Solid abstractions on top of lava-outcome-chain + lava-drift + lava-anomaly so the controller never composes the beat sequence by hand."
+description = "lava-viggy — typed PromessaController trait for the 7-beat Viggy tick (Observe → Diff → Classify → Decide → Act → Attest → Tick). Every controller in the lava-suite expresses its reconcile loop as a typed Promessa whose tick produces a typed BeatOutcome at every beat. Solid abstractions on top of lava-outcome-chain + lava-drift + lava-anomaly so the controller never composes the beat sequence by hand."
 edition = "2024"
 license = "MIT"
 name = "lava-viggy"

@@ -8,7 +8,7 @@
 //!
 //! ## What this models
 //!
-//! `theory/CONTINUOUS-SOLUTION-MACHINE.md` §III.1 declares a
+//! The Viggy model declares a
 //! `PromessaTarget::Compliance(ComplianceTarget)` — a baseline + a
 //! control set + an on-violation policy. The F-4 compliance spec
 //! §3/§6 pins the F-4 arm to a *single* Compliance promessa observed
