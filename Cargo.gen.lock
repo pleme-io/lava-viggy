@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "cargo_lock_sha256": "acdd54fc89b1f669ab691ebbf9b38ba9794e84c913f7a53ecd53eb9ddf90e5dd",
+  "cargo_lock_sha256": "a80211db97b9ab4c85380da6e9befdfb238d9abc91b47d8f2c2c2e75e7afe9e1",
   "manifest_sha256": {
-    "Cargo.toml": "dc3a260ea3a35bb71742cca1a68fe4cebb49a5dec40334abd57f3d75b3277fa9"
+    "Cargo.toml": "676d3ec61ccb64b1fb55ff2f9dee1cdd062fe169864b006cb4c09c9aa436be26"
   },
   "target_resolves": {
     "base": {
@@ -39,11 +39,11 @@
         "build_dependencies": [],
         "features": []
       },
-      "cc-1.4.4": {
+      "cc-1.11.1": {
         "runtime_dependencies": [
           {
             "name": "find_msvc_tools",
-            "package_key": "find-msvc-tools-0.1.11",
+            "package_key": "find-msvc-tools-0.1.15",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -65,7 +65,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "cfg-if-1.0.4": {
+      "cfg-if-1.0.5": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -178,7 +178,7 @@
           },
           {
             "name": "zeroize",
-            "package_key": "zeroize-1.9.0",
+            "package_key": "zeroize-1.9.1",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -302,7 +302,7 @@
           },
           {
             "name": "zeroize",
-            "package_key": "zeroize-1.9.0",
+            "package_key": "zeroize-1.9.1",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -321,12 +321,12 @@
           "zeroize"
         ]
       },
-      "equivalent-1.0.2": {
+      "equivalent-1.0.3": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
       },
-      "find-msvc-tools-0.1.11": {
+      "find-msvc-tools-0.1.15": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -364,7 +364,7 @@
         "runtime_dependencies": [
           {
             "name": "cfg_if",
-            "package_key": "cfg-if-1.0.4",
+            "package_key": "cfg-if-1.0.5",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -374,7 +374,7 @@
           },
           {
             "name": "libc",
-            "package_key": "libc-0.2.189",
+            "package_key": "libc-0.2.191",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -402,11 +402,11 @@
           "std"
         ]
       },
-      "indexmap-2.14.1": {
+      "indexmap-2.14.2": {
         "runtime_dependencies": [
           {
             "name": "equivalent",
-            "package_key": "equivalent-1.0.2",
+            "package_key": "equivalent-1.0.3",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -442,7 +442,7 @@
           "std"
         ]
       },
-      "itoa-1.0.18": {
+      "itoa-1.0.19": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -463,7 +463,7 @@
           },
           {
             "name": "indexmap",
-            "package_key": "indexmap-2.14.1",
+            "package_key": "indexmap-2.14.2",
             "kind": "normal",
             "features": [
               "serde"
@@ -507,7 +507,7 @@
           },
           {
             "name": "serde_json",
-            "package_key": "serde_json-1.0.151",
+            "package_key": "serde_json-1.0.154",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -517,7 +517,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.20",
+            "package_key": "thiserror-2.0.21",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -545,7 +545,7 @@
           },
           {
             "name": "indexmap",
-            "package_key": "indexmap-2.14.1",
+            "package_key": "indexmap-2.14.2",
             "kind": "normal",
             "features": [
               "serde"
@@ -579,7 +579,7 @@
           },
           {
             "name": "serde_json",
-            "package_key": "serde_json-1.0.151",
+            "package_key": "serde_json-1.0.154",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -589,7 +589,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.20",
+            "package_key": "thiserror-2.0.21",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -649,7 +649,7 @@
           },
           {
             "name": "indexmap",
-            "package_key": "indexmap-2.14.1",
+            "package_key": "indexmap-2.14.2",
             "kind": "normal",
             "features": [
               "serde"
@@ -683,7 +683,7 @@
           },
           {
             "name": "serde_json",
-            "package_key": "serde_json-1.0.151",
+            "package_key": "serde_json-1.0.154",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -693,7 +693,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.20",
+            "package_key": "thiserror-2.0.21",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -705,7 +705,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "lava-viggy-0.1.6": {
+      "lava-viggy-0.1.7": {
         "runtime_dependencies": [
           {
             "name": "chrono",
@@ -721,7 +721,7 @@
           },
           {
             "name": "indexmap",
-            "package_key": "indexmap-2.14.1",
+            "package_key": "indexmap-2.14.2",
             "kind": "normal",
             "features": [
               "serde"
@@ -775,7 +775,7 @@
           },
           {
             "name": "serde_json",
-            "package_key": "serde_json-1.0.151",
+            "package_key": "serde_json-1.0.154",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -785,7 +785,7 @@
           },
           {
             "name": "thiserror",
-            "package_key": "thiserror-2.0.20",
+            "package_key": "thiserror-2.0.21",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -797,7 +797,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "libc-0.2.189": {
+      "libc-0.2.191": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
@@ -864,7 +864,7 @@
         "runtime_dependencies": [
           {
             "name": "zerocopy",
-            "package_key": "zerocopy-0.8.56",
+            "package_key": "zerocopy-0.8.63",
             "kind": "normal",
             "features": [
               "simd"
@@ -885,7 +885,7 @@
         "runtime_dependencies": [
           {
             "name": "unicode_ident",
-            "package_key": "unicode-ident-1.0.24",
+            "package_key": "unicode-ident-1.0.27",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -923,7 +923,7 @@
         "runtime_dependencies": [
           {
             "name": "libc",
-            "package_key": "libc-0.2.189",
+            "package_key": "libc-0.2.191",
             "kind": "normal",
             "features": [],
             "uses_default_features": false,
@@ -1108,7 +1108,7 @@
           },
           {
             "name": "syn",
-            "package_key": "syn-3.0.4",
+            "package_key": "syn-3.0.10",
             "kind": "normal",
             "features": [
               "clone-impls",
@@ -1128,11 +1128,11 @@
           "default"
         ]
       },
-      "serde_json-1.0.151": {
+      "serde_json-1.0.154": {
         "runtime_dependencies": [
           {
             "name": "itoa",
-            "package_key": "itoa-1.0.18",
+            "package_key": "itoa-1.0.19",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1181,7 +1181,7 @@
         "runtime_dependencies": [
           {
             "name": "cfg_if",
-            "package_key": "cfg-if-1.0.4",
+            "package_key": "cfg-if-1.0.5",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1257,7 +1257,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "syn-3.0.4": {
+      "syn-3.0.10": {
         "runtime_dependencies": [
           {
             "name": "proc_macro2",
@@ -1281,7 +1281,7 @@
           },
           {
             "name": "unicode_ident",
-            "package_key": "unicode-ident-1.0.24",
+            "package_key": "unicode-ident-1.0.27",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1295,16 +1295,20 @@
           "clone-impls",
           "default",
           "derive",
+          "extra-traits",
+          "full",
           "parsing",
           "printing",
-          "proc-macro"
+          "proc-macro",
+          "visit",
+          "visit-mut"
         ]
       },
-      "thiserror-2.0.20": {
+      "thiserror-2.0.21": {
         "runtime_dependencies": [
           {
             "name": "thiserror_impl",
-            "package_key": "thiserror-impl-2.0.20",
+            "package_key": "thiserror-impl-2.0.21",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1319,7 +1323,7 @@
           "std"
         ]
       },
-      "thiserror-impl-2.0.20": {
+      "thiserror-impl-2.0.21": {
         "runtime_dependencies": [
           {
             "name": "proc_macro2",
@@ -1343,7 +1347,7 @@
           },
           {
             "name": "syn",
-            "package_key": "syn-3.0.4",
+            "package_key": "syn-3.0.10",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1360,7 +1364,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "unicode-ident-1.0.24": {
+      "unicode-ident-1.0.27": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
@@ -1370,14 +1374,14 @@
         "build_dependencies": [],
         "features": []
       },
-      "zerocopy-0.8.56": {
+      "zerocopy-0.8.63": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
           "simd"
         ]
       },
-      "zeroize-1.9.0": {
+      "zeroize-1.9.1": {
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": [
@@ -1407,7 +1411,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1429,7 +1433,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -1455,7 +1459,7 @@
             "runtime_dependencies": [
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1465,7 +1469,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1475,7 +1479,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1485,7 +1489,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1501,7 +1505,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1531,7 +1535,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1595,7 +1599,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1617,7 +1621,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -1635,7 +1639,7 @@
             "runtime_dependencies": [
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1645,7 +1649,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1655,7 +1659,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1665,7 +1669,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1681,7 +1685,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1711,7 +1715,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1764,7 +1768,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1786,7 +1790,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -1804,7 +1808,7 @@
             "runtime_dependencies": [
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1814,7 +1818,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1824,7 +1828,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1834,7 +1838,7 @@
               },
               {
                 "name": "libc",
-                "package_key": "libc-0.2.189",
+                "package_key": "libc-0.2.191",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1850,7 +1854,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1880,7 +1884,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -1933,7 +1937,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -1965,7 +1969,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -2001,7 +2005,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2051,7 +2055,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2159,7 +2163,7 @@
               },
               {
                 "name": "unicode_ident",
-                "package_key": "unicode-ident-1.0.24",
+                "package_key": "unicode-ident-1.0.27",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2173,13 +2177,10 @@
               "clone-impls",
               "default",
               "derive",
-              "extra-traits",
               "full",
               "parsing",
               "printing",
-              "proc-macro",
-              "visit",
-              "visit-mut"
+              "proc-macro"
             ]
           }
         }
@@ -2200,7 +2201,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2232,7 +2233,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -2260,7 +2261,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2310,7 +2311,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2407,7 +2408,7 @@
               },
               {
                 "name": "unicode_ident",
-                "package_key": "unicode-ident-1.0.24",
+                "package_key": "unicode-ident-1.0.27",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2421,13 +2422,10 @@
               "clone-impls",
               "default",
               "derive",
-              "extra-traits",
               "full",
               "parsing",
               "printing",
-              "proc-macro",
-              "visit",
-              "visit-mut"
+              "proc-macro"
             ]
           }
         }
@@ -2448,7 +2446,7 @@
               },
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2480,7 +2478,7 @@
             "build_dependencies": [
               {
                 "name": "cc",
-                "package_key": "cc-1.4.4",
+                "package_key": "cc-1.11.1",
                 "kind": "build",
                 "features": [],
                 "uses_default_features": true,
@@ -2508,7 +2506,7 @@
             "runtime_dependencies": [
               {
                 "name": "cfg_if",
-                "package_key": "cfg-if-1.0.4",
+                "package_key": "cfg-if-1.0.5",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2558,7 +2556,7 @@
               },
               {
                 "name": "zeroize",
-                "package_key": "zeroize-1.9.0",
+                "package_key": "zeroize-1.9.1",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": false,
@@ -2655,7 +2653,7 @@
               },
               {
                 "name": "unicode_ident",
-                "package_key": "unicode-ident-1.0.24",
+                "package_key": "unicode-ident-1.0.27",
                 "kind": "normal",
                 "features": [],
                 "uses_default_features": true,
@@ -2669,13 +2667,10 @@
               "clone-impls",
               "default",
               "derive",
-              "extra-traits",
               "full",
               "parsing",
               "printing",
-              "proc-macro",
-              "visit",
-              "visit-mut"
+              "proc-macro"
             ]
           }
         }
@@ -2699,10 +2694,10 @@
     "block-buffer-0.10.4": {
       "edition": "2018"
     },
-    "cc-1.4.4": {
+    "cc-1.11.1": {
       "edition": "2021"
     },
-    "cfg-if-1.0.4": {
+    "cfg-if-1.0.5": {
       "edition": "2018"
     },
     "chrono-0.4.45": {
@@ -2746,10 +2741,10 @@
     "ed25519-dalek-2.2.0": {
       "edition": "2021"
     },
-    "equivalent-1.0.2": {
+    "equivalent-1.0.3": {
       "edition": "2015"
     },
-    "find-msvc-tools-0.1.11": {
+    "find-msvc-tools-0.1.15": {
       "edition": "2021"
     },
     "generic-array-0.14.7": {
@@ -2768,10 +2763,10 @@
     "iana-time-zone-0.1.65": {
       "edition": "2021"
     },
-    "indexmap-2.14.1": {
+    "indexmap-2.14.2": {
       "edition": "2024"
     },
-    "itoa-1.0.18": {
+    "itoa-1.0.19": {
       "edition": "2021"
     },
     "lava-anomaly-0.1.4": {
@@ -2789,14 +2784,14 @@
         }
       ]
     },
-    "lava-viggy-0.1.6": {
+    "lava-viggy-0.1.7": {
       "edition": "2024",
       "lib_target": {
         "name": "lava_viggy",
         "path": "src/lib.rs"
       }
     },
-    "libc-0.2.189": {
+    "libc-0.2.191": {
       "edition": "2021",
       "build_script": "build.rs"
     },
@@ -2848,7 +2843,7 @@
       "edition": "2021",
       "proc_macro": true
     },
-    "serde_json-1.0.151": {
+    "serde_json-1.0.154": {
       "edition": "2021",
       "build_script": "build.rs"
     },
@@ -2870,31 +2865,31 @@
     "syn-2.0.119": {
       "edition": "2021"
     },
-    "syn-3.0.4": {
+    "syn-3.0.10": {
       "edition": "2021"
     },
-    "thiserror-2.0.20": {
+    "thiserror-2.0.21": {
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "thiserror-impl-2.0.20": {
+    "thiserror-impl-2.0.21": {
       "edition": "2021",
       "proc_macro": true
     },
     "typenum-1.20.1": {
       "edition": "2018"
     },
-    "unicode-ident-1.0.24": {
+    "unicode-ident-1.0.27": {
       "edition": "2021"
     },
     "version_check-0.9.5": {
       "edition": "2015"
     },
-    "zerocopy-0.8.56": {
+    "zerocopy-0.8.63": {
       "edition": "2021",
       "build_script": "build.rs"
     },
-    "zeroize-1.9.0": {
+    "zeroize-1.9.1": {
       "edition": "2024"
     },
     "zmij-1.0.23": {
